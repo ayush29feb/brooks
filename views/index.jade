@@ -3,3 +3,5 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  - for(var i in data)
+  p #{data[i]['home_entities']} is #{data[i]['home_entity_state']}
