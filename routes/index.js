@@ -7,8 +7,8 @@ var ref = db.ref("server/maintenance");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  ref.on('value', function(data){
-    console.log(data);
+  ref.on('value', function(snapshot){
+    console.log(snapshot.val());
   })
   res.render('index', { title: 'Express' });
 });
