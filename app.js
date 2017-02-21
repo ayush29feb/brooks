@@ -5,6 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var admin = require("firebase-admin");
+admin.initializeApp({
+  credential: admin.credential.cert("./brooks-firebase.json"),
+  databaseURL: "https://brooks.firebaseio.com"
+});
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ai = require('./routes/ai')
