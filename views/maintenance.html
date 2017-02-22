@@ -123,11 +123,6 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="mdl-data-table__cell--non-numeric">Sink</td>
-                  <td>Leaking</td>
-                  <td>Plumber</td>
-                </tr>
-                <tr>
                   <td class="mdl-data-table__cell--non-numeric">Toilet</td>
                   <td>Clogged</td>
                   <td>Plumber</td>
@@ -137,11 +132,18 @@
                   <td>Lost</td>
                   <td>Locksmith</td>
                 </tr>
+                <% for (var key in data) { %>
+                  <tr>
+                    <td class="mdl-data-table__cell--non-numeric"><%= data[key]['home_entities']%></td>
+                    <td><%= data[key]['home_entity_state']%></td>
+                    <td><%= data[key]['people']%></td>
+                  </tr>
+                <% } %>
               </tbody>
             </table>
             <div class="demo-separator mdl-cell--1-col"></div>
           </div>
-          <div class="demo-cards mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+          <div class="demo-cards mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
             <div class="demo-card-event mdl-card mdl-shadow--2dp">
               <div class="mdl-card__title mdl-card--expand">
                 <h4>
