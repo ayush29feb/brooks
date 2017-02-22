@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>Maintainence Requests</h1>
+    <% for(var key in data) { %>
+        <li><%= data[key]['home_entities']%> is <%= data[key]['home_entity_state'] %></li>
+    <% } %>
+  </body>
+</html>

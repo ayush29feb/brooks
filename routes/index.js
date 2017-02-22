@@ -8,8 +8,7 @@ var ref = db.ref("server/maintenance");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   ref.on('value', function(snapshot){
-    var data = snapshot.val()
-    console.log(data);
+    var data = snapshot.val();
     res.render('index', { title: 'Property Pro' , data: data});
   })
   
