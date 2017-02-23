@@ -11,21 +11,21 @@ router.get('/', function(req, res, next) {
 
 /* GET home page. */
 router.get('/dashboard', function(req, res, next) {
-  ref.on('value', function(snapshot){
+  ref.once('value', function(snapshot){
     var data = snapshot.val();
     res.render('dashboard', { title: 'Property Pro' , data: data});
   })
 });
 
 router.get('/maintenance', function(req, res, next) {
-  ref.on('value', function(snapshot){
+  ref.once('value', function(snapshot){
     var data = snapshot.val();
     res.render('maintenance', { title: 'Property Pro' , data: data});
   });
 });
 
 router.get('/reports', function(req, res, next) {
-  ref.on('value', function(snapshot){
+  ref.once('value', function(snapshot){
     var data = snapshot.val();
     res.render('reports', { title: 'Property Pro' , data: data});
   });
