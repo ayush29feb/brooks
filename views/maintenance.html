@@ -87,7 +87,7 @@
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
+          <img src="/images/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
             <span>Ayush Saraf</span>
             <div class="mdl-layout-spacer"></div>
@@ -123,20 +123,11 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric"><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;">Toilet</a></td>
-                  <td><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;">Clogged</a></td>
-                  <td><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;">Plumber</a></td>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric"><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;">Keys</a></td>
-                  <td><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;">Lost</a></td>
-                  <td><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;">Locksmith</a></td>
-                </tr>
                 <% for (var key in data) { %>
                   <tr>
-                    <td class="mdl-data-table__cell--non-numeric"><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;"><%= data[key]['home_entities']%></a></td>
-                    <td><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;"><%= data[key]['home_entity_state']%></a></td>
-                    <td><a href="/maintenancerequest" style="color:rgba(0,0,0,.87);  text-decoration: none;"><%= data[key]['people']%></a></td>
+                    <td class="mdl-data-table__cell--non-numeric"><a href="/maintenance/<%= data['key'] %>" style="color:rgba(0,0,0,.87);  text-decoration: none;"><%= data[key]['home_entities']%></a></td>
+                    <td><a href="/maintenance/<%= key%>" style="color:rgba(0,0,0,.87);  text-decoration: none;"><%= data[key]['home_entity_state']%></a></td>
+                    <td><a href="/maintenance<%= key%>" style="color:rgba(0,0,0,.87);  text-decoration: none;"><%= data[key]['people']%></a></td>
                   </tr>
                 <% } %>
               </tbody>

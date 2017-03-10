@@ -24,11 +24,18 @@ router.get('/maintenance', function(req, res, next) {
   });
 });
 
-router.get('/maintenancerequest', function(req, res, next) {
-  ref.once('value', function(snapshot){
+router.get('/maintenance/:id', function(req, res, next) {
+  db.ref("server/maintenance/" + req.params.id).once('value', function(snapshot){
     var data = snapshot.val();
-    res.render('maintenancerequest', { title: 'Property Pro' , data: data});
+    res.render('maintenancerequest', { title: 'Property Pro' , data: data, key: req.params.id});
   });
+});
+
+router.post('/maintenance/:id', function(req, res, next) {
+  console.log('deleted')
+  db.ref("server/maintenance/" + req.params.id).remove().then(function() {
+    res.redirect('/maintenance')
+  })
 });
 
 router.get('/rentpayments', function(req, res, next) {
