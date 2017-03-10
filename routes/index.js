@@ -24,6 +24,20 @@ router.get('/maintenance', function(req, res, next) {
   });
 });
 
+router.get('/rentpayments', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('rentpayments', { title: 'Property Pro' , data: data});
+  });
+});
+
+router.get('/propertyowned', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('propertyowned', { title: 'Property Pro' , data: data});
+  });
+});
+
 router.get('/reports', function(req, res, next) {
   ref.once('value', function(snapshot){
     var data = snapshot.val();
