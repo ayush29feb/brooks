@@ -125,7 +125,7 @@
                   Yes
                 </a>
                 <% for (var key in data) { %>
-                <%= data[key].getRef().removeValue();%>
+                <%= data[key].removeValue();%>
                 <% } %>
                 <a href="maintenance" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                   No
