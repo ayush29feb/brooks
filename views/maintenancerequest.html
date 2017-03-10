@@ -118,12 +118,15 @@
               <ul>
                 <li>House: 7135N 20th St Seattle, WA 98195</li>
                 <li>Issue: Leaking Dishwasher</li>
-                <li>Reported: 1 Day Ago</li>
+                <li>Reported: Today</li>
               </ul>
               <p>The recommended repairman from your approved list is Paul Steamer. Would you like to approve this request?</p>
               <a href="/maintenance" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                   Yes
                 </a>
+                <% for (var key in data) { %>
+                <%= data[key].getRef().removeValue();%>
+                <% } %>
                 <a href="maintenance" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                   No
                 </a>
