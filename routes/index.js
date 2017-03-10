@@ -38,6 +38,34 @@ router.get('/propertyowned', function(req, res, next) {
   });
 });
 
+router.get('/property1', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('property1', { title: 'Property Pro' , data: data});
+  });
+});
+
+router.get('/property2', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('property2', { title: 'Property Pro' , data: data});
+  });
+});
+
+router.get('/property3', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('property3', { title: 'Property Pro' , data: data});
+  });
+});
+
+router.get('/property4', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('property4', { title: 'Property Pro' , data: data});
+  });
+});
+
 router.get('/reports', function(req, res, next) {
   ref.once('value', function(snapshot){
     var data = snapshot.val();
