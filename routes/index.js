@@ -24,6 +24,13 @@ router.get('/maintenance', function(req, res, next) {
   });
 });
 
+router.get('/maintenancerequest', function(req, res, next) {
+  ref.once('value', function(snapshot){
+    var data = snapshot.val();
+    res.render('maintenancerequest', { title: 'Property Pro' , data: data});
+  });
+});
+
 router.get('/rentpayments', function(req, res, next) {
   ref.once('value', function(snapshot){
     var data = snapshot.val();

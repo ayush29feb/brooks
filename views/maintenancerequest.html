@@ -114,34 +114,12 @@
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
           <div class="demo-cards mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-            <table class="mdl-data-table mdl-js-data-table mdl-cell--12-col mdl-data-table--selectable mdl-shadow--2dp">
-              <thead>
-                <tr>
-                  <th class="mdl-data-table__cell--non-numeric">Item</th>
-                  <th>Issue</th>
-                  <th>Supplier</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr href="/maintenancerequest">
-                  <td class="mdl-data-table__cell--non-numeric">Toilet</td>
-                  <td>Clogged</td>
-                  <td>Plumber</td>
-                </tr>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric">Keys</td>
-                  <td>Lost</td>
-                  <td>Locksmith</td>
-                </tr>
-                <% for (var key in data) { %>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric"><%= data[key]['home_entities']%></td>
-                    <td><%= data[key]['home_entity_state']%></td>
-                    <td><%= data[key]['people']%></td>
-                  </tr>
-                <% } %>
-              </tbody>
-            </table>
+            Details: 
+              House: 
+              Issue: 
+              Suggested Repair Person: 
+              Estimated Cost: 
+            Would you like to accept this request? 
             <div class="demo-separator mdl-cell--1-col"></div>
           </div>
           <div class="demo-cards mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
